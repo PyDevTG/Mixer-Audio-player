@@ -1,0 +1,22 @@
+Configure seu aplicativo com o arquivo config.json:
+configure o ip do servidor, caso fique em 0.0.0.0 assumira o localhost ( iplocal do computador que esta rodando o aplicativo), a porta padrão 502.
+no campo alarmes configure o nome do alarme, o registrador que ele ira monitorar, o valor para o trigger, o caminho do audio para que o app execute, 
+configure tambem o tempo de espera apos o alarme ser executado, e se antes do alarme deseja ouvir um som Bell: configure para true.
+ "modbus_server": {
+        "host": "0.0.0.0",
+        "port": 502
+    },
+    
+    "scan_interval_ms": 10000,
+    
+    "alarms": [
+        {
+            "name": "Emergencia CFT 1",
+            "register": 10,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT1/COB1_emergencia.mp3",
+            "repeat": true,
+            "repeat_interval_sec":5,
+            "bell":false,
+            "_comment": "Dispara quando o registrador 10 for igual a 1"
+        },
