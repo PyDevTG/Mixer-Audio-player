@@ -1,0 +1,153 @@
+{
+    "_comment": "Configuração do Mixer Sonoro de Alarmes via Modbus TCP",
+    
+    "modbus_server": {
+        "host": "0.0.0.0",
+        "port": 502
+    },
+    
+    "scan_interval_ms": 6000,
+    
+    "alarms": [
+        {
+            "name": "Emergencia",
+            "register": 10,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_emergencia.mp3",
+            "repeat": true,
+            "repeat_interval_sec":5,
+            "bell":true,
+            "_comment": "Dispara quando o registrador 10 for igual a 1"
+        },
+        {
+            "name": "Erro no Robô",
+            "register": 11,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_robotFailure.mp3",
+            "repeat": true,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "Dispara quando o registrador 11 for igual a 1"
+        },
+        {
+            "name": "Falha na Retirada JIG 01",
+            "register": 12,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_retiradaJig01.mp3",
+            "repeat": true,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "--"
+        },
+        {
+            "name": "Falha na Retirada JIG 02",
+            "register": 13,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_retiradaJig02.mp3",
+            "repeat": true,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "--"
+        },
+        {
+            "name": "Falha na Retirada JIG 03",
+            "register": 14,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_retiradaJig03.mp3",
+            "repeat": true,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "--"
+        },
+        {
+            "name": "Falha na Retirada JIG 04",
+            "register": 15,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_retiradaJig04.mp3",
+            "repeat": true,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "--"
+        },
+        {
+            "name": "Falha na Retirada JIG 05",
+            "register": 16,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_retiradaJig05.mp3",
+            "repeat": true,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "--"
+        },
+        {
+            "name": "Falha na Retirada JIG 06",
+            "register": 17,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_retiradaJig06.mp3",
+            "repeat": true,
+            "repeat_interval_sec": 5,
+            "bell":false,
+            "_comment": "--"
+        },
+        {
+            "name": "Falha na Retirada JIG 07",
+            "register": 18,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_retiradaJig07.mp3",
+            "repeat": true,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "--"
+        },
+        {
+            "name": "Falha na Retirada JIG 08",
+            "register": 19,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_retiradaJig08.mp3",
+            "repeat": true,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "--"
+        },
+        {
+            "name": "Falha na Pegada 01",
+            "register": 20,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_pegada1.mp3",
+            "repeat": true,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "--"
+        },
+        {
+            "name": "Falha na Pegada 02",
+            "register": 21,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_pegada2.mp3",
+            "repeat": true,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "--"
+        },
+        {
+            "name": "Alerta de NG Cheio",
+            "register": 22,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_alertNG.mp3",
+            "repeat": false,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "----"
+        },
+        {
+            "name": "Esteira bloqueada",
+            "register": 23,
+            "trigger_value": 1,
+            "audio_file": "audios/CFT/COB1_esteiraBloq.mp3",
+            "repeat": false,
+            "repeat_interval_sec": 5,
+            "bell":true,
+            "_comment": "----"
+        }
+    ]
+}
